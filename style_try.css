@@ -1,0 +1,921 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf') format('woff2');
+    font-weight: bold;
+}
+
+/*HEADER*/
+body, .bg-custom {
+    background: #fff;
+}
+
+/* Логотип */
+.logo-text .logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.logo-text {
+    letter-spacing: 1px;
+    font-family: Montserrat;
+}
+
+/* Стили для nav */
+.navbar-nav .nav-link {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #111;
+    margin-right: 18px;
+    font-size: 19px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-toggle:hover {
+    color: #b2422f;
+}
+.bg-custom {
+    background: #fff3ed!important;
+    box-shadow: none;
+    position: relative;
+}
+
+.btn-top {
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 2px 2px #dbd0ca3d;
+    padding: 7px 18px;
+}
+.btn-outline-dark {
+    background: none !important;
+    border: 2px solid #111 !important;
+}
+.btn-dark {
+    border: none;
+    background: #111 !important;
+    color: #fff !important;
+    transition: filter .1s;
+}
+.btn-dark:hover {
+    filter: brightness(1.15);
+}
+
+/* HERO BANNER */
+.hero-section {
+    min-height: 88vh;
+    position: relative;
+    background: #fff3ed;
+    overflow: hidden;
+}
+
+.daily-text {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: bold;
+    color: #171211;
+    letter-spacing: -.5px;
+    line-height: 1.1;
+}
+.podcast-text {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: bold;
+    color: #b2422f;
+    margin-bottom: 32px;
+    letter-spacing: -.5px;
+    line-height: 1.1;
+}
+.subtitle {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: #40382e;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.btn-subscribe {
+    font-family: Montserrat;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 3px 3px #dbd0ca3d;
+    padding: 12px 36px;
+    font-size: 16px;
+}
+
+/* Абстрактная линия слева */
+.abstract-left {
+    position: absolute;
+    left: -5px;
+    top: 35%;
+    z-index: 1;
+    width: 220px;
+    height: 250px;
+    background: none;
+    pointer-events: none;
+}
+.abstract-left::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 180px;
+    height: 176px;
+    border-left: 7px solid #181008;
+    border-radius: 200px 120px 110px 280px;
+    transform: rotate(-7deg);
+}
+.abstract-left::after {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 130px;
+    width: 15px;
+    height: 15px;
+    background: #c84f36;
+    border-radius: 50%;
+    box-shadow: -8px 4px #b2422f;
+}
+
+/* Абстрактные звездочки справа */
+.abstract-right {
+    position: absolute;
+    right: 30px;
+    top: 37%;
+    z-index: 1;
+    width: 150px;
+    height: 130px;
+    background: none;
+    pointer-events: none;
+}
+.abstract-right::before {
+    content: "";
+    position: absolute;
+    left: 68px;
+    top: 5px;
+    width: 95px;
+    height: 86px;
+    border: 7px solid #7ab8c0;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    transform: rotate(27deg) scaleX(.61) scaleY(1);
+    border-right: none;
+    border-bottom: none;
+}
+/* малые звездочки */
+.abstract-right::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 85px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    background-image:
+      linear-gradient(45deg, #b2422f 39%, transparent 40%),
+      linear-gradient(-45deg, #111 49%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 16px 16px, 14px 14px;
+    background-position: 24px 0, 0 18px;
+}
+
+/* Кастомные стили для шапки */
+.navbar-brand {
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin: 0 10px;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn-outline-light {
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    font-weight: 500;
+}
+
+/* Стили для модального окна */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Адаптивность */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+    
+    .d-flex {
+        margin-top: 10px;
+    }
+}
+
+/*ВДОХНОВЕНИЕ И ОТЗЫВ*/
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 2rem 0;
+}
+
+.character text {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* --- Блок отзыва/цитаты --- */
+.inspire-quote {
+    background: #F7EDE8;
+    border-radius: 14px;
+    padding: 55px 60px 38px 60px;
+    min-height: 235px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    z-index: 10;
+    overflow: visible;
+    box-shadow: none;
+}
+.inspire-quote-inner {
+    position: relative;
+    z-index: 2;
+}
+.inspire-quote-mark {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 34px;
+    color: #ca5031;
+    font-weight: bold;
+    line-height: 0.8;
+}
+.inspire-quote-main {
+    font-size: 26px;
+    color: #181008;
+    font-weight: bold;
+    font-family: Montserrat;
+    text-align: center;
+    line-height: 1.3;
+}
+.inspire-quote-author {
+    font-size: 16px;
+    color: #111;
+    font-family: Montserrat;
+    margin-top: 24px;
+}
+.inspire-author-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 7px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
+.author-role {
+    color: #221812;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+.badge.bg-success {
+    width: 30px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .character svg,
+    .bulb svg {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.abstract-quote-left {
+    position: absolute;
+    left: -50px;
+    top: 46px;
+    z-index: 1;
+    width: 70px;
+    height: 110px;
+    pointer-events: none;
+}
+
+.abstract-quote-star {
+    position: absolute;
+    right: -38px;
+    top: 60px;
+    z-index: 1;
+    width: 87px;
+    height: 80px;
+    pointer-events: none;
+}
+
+/*WHAT OUR LISTENERS SAY*/
+.reviews {
+    background-color: #EDF3F7;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.slider-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slides-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #6f42c1;
+    line-height: 1;
+}
+
+.review-text {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.user-name {
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+.platform {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.slider-arrow {
+    background: rgba(0, 0, 0, 0);;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.slider-arrow:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+    
+    .slider-arrow {
+        display: none;
+    }
+}
+
+/*MEMBERSHIP BENEFITS*/
+.membership-section {
+    background: #fff;
+    position: relative;
+    padding-bottom: 4.3rem !important;
+    padding-top: 4.8rem !important;
+    overflow: hidden;
+}
+.membership-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 3.3rem;
+    color: #181008;
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.7px;
+}
+.membership-subtitle {
+    color: #898989;
+    font-size: 1.18rem;
+    font-family: Montserrat;
+    margin-bottom: 2.5rem;
+}
+
+.membership-item-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    font-family: Montserrat;
+    color: #181008;
+    margin-bottom: 0.22rem;
+}
+.membership-item-text {
+    color: #181008;
+    font-size: 1.01rem;
+    max-width: 260px;
+    margin: 0 auto;
+    font-family: Montserrat;
+    margin-bottom: 0;
+    margin-top: 0.12rem;
+    opacity: 0.82;
+}
+
+.membership-btn {
+    background: #181008;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px #dbd0ca3d;
+    font-family: Montserrat;
+    font-weight: 700;
+    padding: 13px 45px;
+    font-size: 1.1rem;
+    transition: filter 0.16s;
+    letter-spacing: 0.7px;
+}
+.membership-btn:hover {
+    filter: brightness(1.12);
+}
+
+/* SVG адаптация */
+.membership-section svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Декоративные линии (имитация как на фото, адаптация под мобильные) */
+.membership-decor-top {
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    width: 60px;
+    height: 54px;
+    z-index: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.membership-decor-top::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -22px;
+    width: 3px;
+    height: 41px;
+    background: #181008;
+    transform: translateX(-50%);
+    border-radius: 40px;
+}
+.membership-decor-top::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    width: 65px;
+    height: 43px;
+    border-bottom: 3.7px solid #181008;
+    border-radius: 33% 55% 77% 24%;
+    transform: translateX(-50%) rotate(-7deg);
+}
+
+.membership-decor-right {
+    position: absolute;
+    top: 0px;
+    right: 25%;
+    width: auto;
+    height: 120px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.membership-decor-right::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 83px;
+    height: 38px;
+    border-top: 4.5px solid #181008;
+    border-radius: 100% 30% 52% 78%;
+    transform: rotate(21deg);
+}
+
+.membership-decor-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    width: 70px;
+    height: 54px;
+    z-index: 1;
+    transform: translateX(-50%) rotate(180deg);
+    pointer-events: none;
+}
+.membership-decor-bottom::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -22px;
+    width: 3px;
+    height: 41px;
+    background: #181008;
+    transform: translateX(-50%);
+    border-radius: 40px;
+}
+.membership-decor-bottom::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    width: 65px;
+    height: 43px;
+    border-bottom: 3.7px solid #181008;
+    border-radius: 33% 55% 77% 24%;
+    transform: translateX(-50%) rotate(-7deg);
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 991px) {
+    .membership-title { font-size: 2.3rem; }
+    .membership-section { padding-top: 3.2rem !important; padding-bottom: 3rem !important;}
+}
+@media (max-width: 768px) {
+    .membership-decor-top,
+    .membership-decor-right,
+    .membership-decor-bottom { display: none; }
+    .membership-title { font-size: 1.4rem; }
+    .membership-item-text { font-size: 0.96rem;}
+    .membership-section { padding-top: 2.4rem !important; padding-bottom: 2rem !important;}
+}
+
+/*LATEST EPISODE*/
+.latest-episodes {
+    font-family: Montserrat;
+    padding: 40px 0;
+    background-color: #F7EDE8;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #000;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #495057;
+    border: none;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: #CD4631;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #CD4631;
+    font-weight: 600;
+}
+
+.episodes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.episode-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.episode-number {
+    font-size: 14px;
+    color: #CD4631;
+    margin-bottom: 8px;
+}
+
+.episode-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.episode-description {
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.episode-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .episodes-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/*BECOME OUR SPONSOR*/
+/*BECOME OUR SPONSOR*/
+.sponsor-section {
+    background-color: #fff;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-title {
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #181008;
+    margin-bottom: 1rem;
+}
+
+.sponsor-subtitle {
+    font-family: Montserrat;
+    color: #6c757d;
+    font-size: 1.2rem;
+}
+
+/* Основные стили для контейнера карточки и преимуществ */
+.card-and-features {
+    transition: all 0.3s ease;
+}
+
+.pricing-card {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pricing-card.featured {
+    border-color: #CD4631;
+    background-color: #CD4631;
+    color: white;
+}
+
+.pricing-card.featured .plan-title,
+.pricing-card.featured .plan-description,
+.pricing-card.featured .price {
+    color: white !important;
+}
+
+.plan-title {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #181008;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plan-description {
+    font-family: Montserrat;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    flex-shrink: 0;
+}
+
+.features ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+    font-family: Montserrat;
+    margin-bottom: 0;
+}
+
+.features li {
+    padding: 6px 0;
+    color: #495057;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.features li:before {
+    content: "•";
+    color: #CD4631;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+/* Декоративные элементы */
+.decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.decor-lines-top {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background: 
+        linear-gradient(45deg, transparent 40%, #CD4631 40%, #CD4631 60%, transparent 60%),
+        linear-gradient(-45deg, transparent 40%, #b2422f 40%, #b2422f 60%, transparent 60%);
+    background-size: 40px 5px;
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 12px;
+}
+
+.decor-waves {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 240px;
+    height: 120px;
+}
+
+.decor-splash {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .sponsor-section {
+        padding: 60px 0;
+    }
+    
+    .sponsor-title {
+        font-size: 2.5rem;
+    }
+    
+    .decorations {
+        display: none;
+    }
+    
+    .card-and-features {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sponsor-title {
+        font-size: 2rem;
+    }
+    
+    .sponsor-subtitle {
+        font-size: 1rem;
+    }
+    
+    .card-and-features {
+        margin-bottom: 3rem;
+    }
+}
+
+/*FAQ*/
+/* Стили для аккордеона */
+.text-center{
+    font-family: Montserrat;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #000;
+
+}
+
+.accordion-button {
+    font-family: Montserrat;
+    background-color: #F7EDE8;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #F7EDE8;
+    color: #CD4631;
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    background-color: #F7EDE8;
+}
+
+.accordion-button::after {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active::after {
+    transform: rotate(-180deg);
+}
+
+.accordion-body {
+    font-family: Montserrat;
+    background-color: #fff;
+    border-left: 3px solid #CD4631;
+    padding: 1rem 1.25rem;
+}
+
+.accordion-item {
+    border: 1px solid #F7EDE8;
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+/* Анимация раскрытия */
+.accordion-collapse {
+    transition: all 0.3s ease;
+}
