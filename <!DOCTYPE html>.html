@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Daily Podcast</title>
+    <!-- Подключение Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg bg-custom">
+        <div class="container">
+            <a class="navbar-brand logo-text d-flex align-items-center" href="#">
+                <!-- Логотип из текста, можно заменить на svg при желании -->
+                <img src="images/logo.svg" class="logo">
+                <span class="ms-1">POD<br>OF<br>CAST</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Episodes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">Team</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-dark btn-top" id="recentBtn">RECENT EPISODES</button>
+                <button class="btn btn-dark btn-top" id="subscribeBtn">SUBSCRIBE</button>
+            </div>
+        </div>
+</nav>
+
+<!-- Главный блок -->
+<section class="hero-section d-flex align-items-center justify-content-center text-center">
+        <!-- Абстрактные линии слева -->
+        <img src="images/1.svg" class="abstract-left">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="daily-text mb-0">Your Daily</h1>
+                    <h1 class="podcast-text mb-3">Podcast</h1>
+                    <p class="subtitle mb-3">We cover all kinds of categories and<br>a weekly special guest.</p>
+                    <button class="btn btn-dark btn-subscribe" id="mainSubscribe">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <!-- Абстрактные “звездочки” справа -->
+        <img src="images/2.svg" class="abstract-right">
+</section>
+
+    
+<!-- Новый раздел Секция-вдохновения -->
+<section class="inspire-section container-fluid py-5 position-relative">
+  <!-- Абстрактная линия сверху -->
+  <img src="images/3.svg" class="abstract-inspire-top">
+  <div class="container">
+
+    <!-- Центрированный заголовок -->
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="inspire-title">
+          Talk. Listen. Get inspired <br>
+          by every minute of it.
+        </h2>
+      </div>
+    </div>
+
+    <!-- Два информационных блока с иконками -->
+    <div class="row mb-5 justify-content-center align-items-end">
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="images/pic1.svg" alt="Thinking Icon" class="inspire-icon mb-3">
+        <p class="inspire-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Curabitur ac ultrices odio.
+        </p>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="images/pic2.svg" alt="Bulb Icon" class="inspire-icon mb-3">
+        <p class="inspire-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Curabitur ac ultrices odio.
+        </p>
+      </div>
+    </div>
+
+    <!-- Блок-отзыв с цитатой -->
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-10">
+        <div class="inspire-quote position-relative">
+          <!-- Абстрактная линия-слева -->
+          <img src="images/4.svg" class="abstract-quote-left">
+          <!-- Абстрактная звезда-справа -->
+          <img src="images/5.svg" class="abstract-quote-star">
+          <div class="inspire-quote-inner">
+            <div class="inspire-quote-mark mb-3">“</div>
+            <div class="inspire-quote-main">
+              One of the best daily podcasts that<br>
+              covers every topic on Spotify.
+            </div>
+            <div class="inspire-quote-author d-flex align-items-center justify-content-center mt-4">
+              <img src="images/avatar1.svg" alt="John Smith" class="inspire-author-img me-2">
+              <span><strong>John Smith,</strong></span>
+              <img src="images/spotify1.svg" class="badge bg-success">
+              <span class="author-role">Social Community Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Доп.абстрактная линия-внизу -->
+  <img src="images/6.svg" class="abstract-inspire-bottom">
+</section>
+
+
+<!-- Testimonials -->
+<section class="testimonials-section position-relative py-5">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-3">
+      <div class="col-12 position-relative">
+        <span class="testimonials-rays">
+          <!-- SVG rays -->
+          <img src="images/14.svg">
+        </span>
+        <h2 class="testimonials-title mb-2">What our listeners say</h2>
+        <p class="testimonials-subtitle">Their experience throughout every platform</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="testimonial-slider d-flex align-items-stretch gap-4 flex-wrap" id="testimonialSlider">
+          <!-- Отзыв 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote">“</div>
+              <div class="testimonial-text">
+                An incredibly stylish and well-thought-out website! The navigation is intuitive, all sections are easy to find, and the main page grabs your attention immediately. The design is modern, the colors are pleasant, and everything works fast. I especially liked how the filters in the episodes section are implemented—I can now immediately find what interests me. Great job!
+              </div>
+            </div>
+            <div class="testimonial-user mt-3">
+              <img src="images/avatar2.svg" alt="Luna Lovegood" class="testimonial-avatar">
+              <div>
+                <span class="testimonial-author">Luna Lovegood,</span>
+                <span class="testimonial-platform">
+                  <img src="images/spotify1.svg" width="18" style="vertical-align:-3px; margin-right:4px;" alt="Spotify">Spotify
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Отзыв 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote">“</div>
+              <div class="testimonial-text">
+                I use the site from my phone—everything is perfectly adapted! The buttons are convenient, the fonts are readable, and the interface isn't cluttered. I really liked the subscription modal window: just fill out the form and you're done. And yes, the testimonial slider looks awesome! The site fully meets my expectations as a podcast listener.
+              </div>
+            </div>
+            <div class="testimonial-user mt-3">
+              <img src="images/avatar3.svg" alt="Emily Blunt" class="testimonial-avatar">
+              <div>
+                <span class="testimonial-author">Emily Blunt,</span>
+                <span class="testimonial-platform">
+                  <img src="images/google podcast.svg" width="18" style="vertical-align:-3px; margin-right:4px;" alt="Google Podcast">Google Podcast
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Отзыв 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote">“</div>
+              <div class="testimonial-text">
+                This website is not just an episode catalog, but a whole space for inspiration. I love how the episode cards are designed, complete with descriptions and tags. The section with quotes and speaker stories creates a feeling of live communication. Thank you for the quality content and beautiful presentation! I'm now your regular listener.
+              </div>
+            </div>
+            <div class="testimonial-user mt-3">
+              <img src="images/avatar4.svg" alt="Michael Rodriguez" class="testimonial-avatar">
+              <div>
+                <span class="testimonial-author">Michael Rodriguez,</span>
+                <span class="testimonial-platform">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/applepodcasts.svg" width="18" style="vertical-align:-3px; margin-right:4px;" alt="Apple Podcast">Apple Podcast
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav mt-4">
+          <button type="button" class="testimonial-arrow prev" aria-label="Previous testimonial"><img src="images/arrow-left.svg"></button>
+          <button type="button" class="testimonial-arrow next" aria-label="Next testimonial"><img src="images/arrow-right.svg"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JS Testimonials-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('testimonialSlider');
+  const cards = Array.from(slider.children);
+  let slidesPerView = window.innerWidth < 768 ? 1 : 2;
+  let current = 0;
+
+  function render() {
+    slidesPerView = window.innerWidth < 768 ? 1 : 2;
+    // Скрыть все
+    cards.forEach(card => card.style.display = 'none');
+    // Показать нужные
+    for(let i=0; i<slidesPerView; i++) {
+      let idx = (current + i) % cards.length;
+      cards[idx].style.display = '';
+    }
+  }
+
+  document.querySelector('.testimonial-arrow.next').onclick = function() {
+    current = (current + 1) % cards.length;
+    render();
+  };
+  document.querySelector('.testimonial-arrow.prev').onclick = function() {
+    current = (current - 1 + cards.length) % cards.length;
+    render();
+  };
+
+  window.addEventListener('resize', function() {
+    render();
+  });
+
+  render();
+});
+</script>
+
+
+<!-- Membership Benefits Section -->
+<section class="membership-section py-5 position-relative">
+  <!-- Декоративная линия справа -->
+  <img src="images/7.svg" class="membership-decor-right">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <h2 class="membership-title">Membership benefits</h2>
+        <p class="membership-subtitle mb-5">
+          Become our sponsor and get all benefits
+        </p>
+      </div>
+    </div>
+    <!-- Основная сетка с преимуществами -->
+    <div class="row gy-5 mb-4">
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- Зигзаг -->
+          <img src="images/8.svg" width="auto" height="50" viewBox="0 0 48 24" fill="none">
+        </div>
+        <div class="membership-item-title">Topic by Request</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- Бриллианты -->
+          <img src="images/9.svg" width="auto" height="50" viewBox="0 0 48 24" fill="none">
+        </div>
+        <div class="membership-item-title">Exclusive Content</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- улыбающееся лицо -->
+          <img src="images/10.svg" width="auto" height="50" viewBox="0 0 48 24" fill="none">
+        </div>
+        <div class="membership-item-title">Join the Community</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+      <div class="w-100 d-block d-md-none"></div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- Лицо круг -->
+          <img src="images/11.svg" width="auto" height="50" viewBox="0 0 47 43" fill="none">
+        </div>
+        <div class="membership-item-title">Livestreaming Access</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- Пламя -->
+          <img src="images/12.svg" width="auto" height="50" viewBox="0 0 47 43" fill="none">
+        </div>
+        <div class="membership-item-title">Exclusive Episodes &amp; Merch</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <!-- Звезда -->
+          <img src="images/13.svg" width="auto" height="50" viewBox="0 0 52 46" fill="none">
+        </div>
+        <div class="membership-item-title">And much more!</div>
+        <div class="membership-item-text">
+          Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center mt-2">
+      <div class="col-12">
+        <button class="btn membership-btn mt-2">SEE PRICING</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Episode Section -->
+<section class="episodes-section position-relative py-5">
+  <div class="episodes-abstract-top"></div>
+  <div class="episodes-abstract-bottom"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center position-relative">
+        <h2 class="episodes-title">Latest Episode</h2>
+      </div>
+    </div>
+    <!-- Фильтры -->
+    <div class="row mt-3 mb-4">
+      <div class="col-12 d-flex flex-wrap justify-content-center gap-2 gap-md-4 episodes-filters" id="episodesFilters">
+        <span class="episode-filter active" data-tab="all">All</span>
+        <span class="episode-filter" data-tab="business">Business</span>
+        <span class="episode-filter" data-tab="comedy">Comedy</span>
+        <span class="episode-filter" data-tab="education">Education</span>
+        <span class="episode-filter" data-tab="health">Health</span>
+        <span class="episode-filter" data-tab="news">News</span>
+        <span class="episode-filter" data-tab="tech">Tech</span>
+      </div>
+    </div>
+    <div class="row gy-4" id="episodesGrid"></div>
+  </div>
+</section>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    let slideInterval;
+    
+    // Функция для показа определенного слайда
+    function showSlide(n) {
+        // Скрываем все слайды
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Убираем активный класс со всех точек
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Корректируем индекс, если он выходит за границы
+        if (n >= slides.length) {
+            currentSlide = 0;
+        } else if (n < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = n;
+        }
+        
+        // Показываем текущий слайд и активируем соответствующую точку
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    // Функция для перехода к следующему слайду
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+    
+    // Функция для перехода к предыдущему слайду
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+    
+    // Запуск автоматической смены слайдов
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000); // Смена каждые 5 секунд
+    }
+    
+    // Остановка автоматической смены слайдов
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+    
+    // Обработчики событий для кнопок навигации
+    nextBtn.addEventListener('click', function() {
+        stopSlideShow();
+        nextSlide();
+        startSlideShow();
+    });
+    
+    prevBtn.addEventListener('click', function() {
+        stopSlideShow();
+        prevSlide();
+        startSlideShow();
+    });
+    
+    // Обработчики событий для точек навигации
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            stopSlideShow();
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            showSlide(slideIndex);
+            startSlideShow();
+        });
+    });
+    
+    // Остановка автоматической смены при наведении на слайдер
+    const slider = document.querySelector('.testimonials-slider');
+    slider.addEventListener('mouseenter', stopSlideShow);
+    slider.addEventListener('mouseleave', startSlideShow);
+    
+    // Инициализация слайдера
+    showSlide(currentSlide);
+    startSlideShow();
+});
+</script>
+
+
+<!-- SPONSORSHIP SECTION -->
+<section class="sponsor-section position-relative py-5">
+  <!-- Декоративы -->
+  <div class="sponsor-abstract-top"></div>
+  <div class="sponsor-abstract-star"></div>
+  <div class="sponsor-abstract-bottom"></div>
+  <div class="container">
+    <!-- Заголовок и подзаголовок -->
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-12 position-relative">
+        <span class="sponsor-rays">
+          <!-- SVG "лучи" -->
+          <svg width="38" height="26" viewBox="0 0 38 26" fill="none">
+            <path d="M14 26L17 15" stroke="#C84F36" stroke-width="3.3" stroke-linecap="round"/>
+            <path d="M28 19L25 11" stroke="#C84F36" stroke-width="3.3" stroke-linecap="round"/>
+            <path d="M4 15L13 10" stroke="#C84F36" stroke-width="3.3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h2 class="sponsor-title mb-2">Become our sponsor</h2>
+        <p class="sponsor-subtitle">Get exclusive episodes, merch and more</p>
+      </div>
+    </div>
+    <!-- Тарифные планы -->
+    <div class="row justify-content-center mb-0 gy-4 gx-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan">
+          <div class="sponsor-plan-title">Member</div>
+          <div class="sponsor-plan-desc">Lorem ipsum dolor sit amet consectetur cing elit, sed do eiusmod tempor.</div>
+          <div class="sponsor-plan-bottom d-flex flex-row align-items-center justify-content-between mt-4">
+            <button class="btn sponsor-plan-btn">SUBSCRIBE</button>
+            <div class="sponsor-plan-price">
+              <span>9.99</span>
+              <span class="sponsor-plan-month">/month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan sponsor-plan-main">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="sponsor-plan-title">Family</div>
+            <span class="sponsor-plan-popular">MOST POPULAR</span>
+          </div>
+          <div class="sponsor-plan-desc">Lorem ipsum dolor sit amet consectetur cing elit, sed do eiusmod tempor.</div>
+          <div class="sponsor-plan-bottom d-flex flex-row align-items-center justify-content-between mt-4">
+            <button class="btn sponsor-plan-btn">SUBSCRIBE</button>
+            <div class="sponsor-plan-price main-price">
+              <span>$14.99</span>
+              <span class="sponsor-plan-month">/month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan">
+          <div class="sponsor-plan-title">Official</div>
+          <div class="sponsor-plan-desc">Lorem ipsum dolor sit amet consectetur cing elit, sed do eiusmod tempor.</div>
+          <div class="sponsor-plan-bottom d-flex flex-row align-items-center justify-content-between mt-4">
+            <button class="btn sponsor-plan-btn">SUBSCRIBE</button>
+            <div class="sponsor-plan-price">
+              <span>$29.99</span>
+              <span class="sponsor-plan-month">/month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Список преимуществ для каждого тарифа -->
+    <div class="row justify-content-center gx-4 gy-4 mt-2">
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan-list">
+          <div class="sponsor-list-title">What's included:</div>
+          <ul class="sponsor-list">
+            <li>Exclusive Content</li>
+            <li>5% Discount on Merch</li>
+            <li>Join the Community</li>
+            <li>Livestreaming Access</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan-list sponsor-plan-list-main">
+          <div class="sponsor-list-title">What's included:</div>
+          <ul class="sponsor-list">
+            <li><b>Everything in Tier 1</b></li>
+            <li>Free tickets to Events</li>
+            <li>Limited Edition Merch</li>
+            <li>Promote your Product</li>
+            <li>Request Topic</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="sponsor-plan-list">
+          <div class="sponsor-list-title">What's included:</div>
+          <ul class="sponsor-list">
+            <li><b>Everything in Tier 2</b></li>
+            <li>Exclusive Badge on Livestreaming</li>
+            <li>Become an Official Sponsor</li>
+            <li>Early Access to All Episodes</li>
+            <li>Free Stikers and Merch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+// Данные эпизодов (одинаковые элементы, разные порядки для вкладок)
+const episodesData = [
+  {
+    id: 6,
+    label: "Eps. 6",
+    title: "Pandemic Becoming Endemic",
+    desc: "A Nature survey shows many scientists expect the virus that causes COVID-19 to become...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep6.jpg",
+    tags: ["covid-19", "health"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ],
+    main: true
+  },
+  {
+    id: 5,
+    label: "Eps. 5",
+    title: "Tesla Autopilot Controversy",
+    desc: "Tesla’s vehicles boast ‘Full-Self-Driving’ (FSD), but current regulations do not allow for fully...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep5.jpg",
+    tags: ["automation", "tech"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ]
+  },
+  {
+    id: 4,
+    label: "Eps. 4",
+    title: "Women's Rights? Is it alright?",
+    desc: "A look back at history shows that women have made great strides in the fight for equality...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep4.jpg",
+    tags: ["women's rights"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ]
+  },
+  {
+    id: 3,
+    label: "Eps. 3",
+    title: "How to Deal with Self-Confidence",
+    desc: "We have a therapist expert as our guest, Krista Gordon is will share her experience...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep3.jpg",
+    tags: ["self-esteem", "health"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ]
+  },
+  {
+    id: 2,
+    label: "Eps. 2",
+    title: "Type of Social Classes of People",
+    desc: "Social class refers to a group of people with similar levels of wealth, influence, and...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep2.jpg",
+    tags: ["social class", "wealth"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ]
+  },
+  {
+    id: 1,
+    label: "Eps. 1",
+    title: "Are you a Perplexed Mind Person?",
+    desc: "Unable to grasp something clearly or to think logically and decisively about something...",
+    image: "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/ep1.jpg",
+    tags: ["mind-behaviour", "health"],
+    hosts: [
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host1.png",
+      "https://cdn.jsdelivr.net/gh/inn0kenty/podcast-images@main/host2.png"
+    ]
+  }
+];
+
+// Массивы порядков для табов
+const episodeOrders = {
+  all:        [6,5,4,3,2,1],
+  business:   [3,6,1,4,2,5],
+  comedy:     [4,6,5,1,3,2],
+  education:  [2,3,6,4,1,5],
+  health:     [6,3,5,4,1,2],
+  news:       [2,6,5,4,3,1],
+  tech:       [5,1,6,3,2,4]
+};
+
+function renderEpisodes(tab) {
+  // В каком порядке выводим эпизоды
+  const ids = episodeOrders[tab] || episodeOrders['all'];
+  // Вывести их по два столбца (bootstrap columns)
+  let col1 = '', col2 = '';
+  ids.forEach((id, idx) => {
+    const ep = episodesData.find(e=>e.id===id);
+    const card = `
+    <div class="episode-card{ep.main ? ' episode-card-main' : ''} d-flex flex-row">
+      <div class="episode-img-wrap flex-shrink-0">
+        <img src="${ep.image}" alt="" class="episode-img">
+        <div class="episode-icons">
+          <span>● ◔ ♫</span>
+        </div>
+      </div>
+      <div class="episode-body flex-grow-1">
+        <span class="episode-label${[2,3,4].includes(ep.id) ? ' label-orange':''}">${ep.label}</span>
+        <div class="episode-main-title${[2,3].includes(ep.id) ? ' orange-title' :(ep.main?' main-title':'') }">${ep.title}</div>
+        <div class="episode-desc">${ep.desc}</div>
+        <div class="d-flex flex-wrap gap-2 mt-1">
+          ${ep.tags.map(tag=>`<span class="episode-tag">${tag}</span>`).join('')}
+        </div>
+        <div class="episode-hosted mt-2">
+          Hosted by:
+          ${ep.hosts.map(url=>`<img src="${url}" alt="" class="episode-host-pic">`).join('')}
+        </div>
+      </div>
+    </div>`;
+    if (idx%2===0) col1 += card;
+    else col2 += card;
+  });
+  // Собрать две колонки
+  document.getElementById('episodesGrid').innerHTML = `
+    <div class="col-md-6 d-flex flex-column gap-4">${col1}</div>
+    <div class="col-md-6 d-flex flex-column gap-4">${col2}</div>
+  `;
+}
+
+// Фильтрация табов
+document.getElementById('episodesFilters').onclick = function(e) {
+  if (e.target.classList.contains('episode-filter')) {
+    document.querySelectorAll('.episode-filter').forEach(tab => tab.classList.remove('active'));
+    e.target.classList.add('active');
+    renderEpisodes(e.target.dataset.tab);
+  }
+};
+
+// Первый рендер
+renderEpisodes('all');
+</script>
+ 
+<!-- Модальное окно -->
+<div class="modal-overlay" id="subscribeModal">
+    <div class="modal-content-custom">
+        <div class="modal-header-custom">
+            <h3>Get in touch</h3>
+            <p class="modal-subtitle">Send your message to us</p>
+            <button class="close-modal">&times;</button>
+        </div>
+        <form id="subscribeForm" class="modal-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Porter Sevl" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Your message goes here..." rows="4" required></textarea>
+            </div>
+            <div class="form-footer">
+                <p class="required-text">*required</p>
+                <button type="submit" class="btn-send-message">SEND MESSAGE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление -->
+<div class="notification" id="successNotification">
+    <div class="notification-content">
+        <span>Thanks for your support!</span>
+    </div>
+</div>
+
+<script>
+    // Модальное окно и обработчики событий
+    const modal = document.getElementById('subscribeModal');
+    const successNotification = document.getElementById('successNotification');
+    const subscribeForm = document.getElementById('subscribeForm');
+
+    // Функции для открытия/закрытия модального окна
+    function openModal() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Показ уведомления
+    function showNotification() {
+        successNotification.style.display = 'block';
+        setTimeout(() => {
+            successNotification.style.display = 'none';
+        }, 4000);
+    }
+
+    // Обработчики для кнопок Subscribe
+    document.getElementById('subscribeBtn').addEventListener('click', openModal);
+    document.getElementById('mainSubscribe').addEventListener('click', openModal);
+
+    // Обработчики для кнопок в секции спонсорства
+    document.querySelectorAll('.sponsor-plan-btn').forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    // Добавляем этот код в существующий script блок:
+
+    // Обработчик для кнопки Recent Episodes
+    document.getElementById('recentBtn').addEventListener('click', function() {
+        document.querySelector('.episodes-section').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+    
+    // Закрытие модального окна
+    document.querySelector('.close-modal').addEventListener('click', closeModal);
+
+    // Закрытие при клике на фон
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Обработка отправки формы
+    subscribeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Простая валидация
+        const requiredFields = subscribeForm.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = '#e74c3c';
+            }
+        });
+        
+        // Валидация email
+        const emailField = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailField.value && !emailRegex.test(emailField.value)) {
+            isValid = false;
+            emailField.style.borderColor = '#e74c3c';
+        }
+        
+        if (isValid) {
+            // Здесь можно добавить отправку данных на сервер
+            console.log('Форма отправлена:', {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            });
+            
+            // Закрываем модальное окно и показываем уведомление
+            closeModal();
+            showNotification();
+            subscribeForm.reset();
+        }
+    });
+
+    // Сброс стилей валидации при вводе
+    subscribeForm.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('input', () => {
+            field.style.borderColor = '#e0e0e0';
+        });
+    });
+</script>
+
+<!-- FAQ Accordion Section -->
+<section class="faq-section py-5 bg-light position-relative">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-lg-8 text-center">
+        <h2 class="faq-title mb-2">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">Answers to common questions about our podcast</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <!-- Вопрос 1 -->
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                How often are new episodes released?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                New episodes are released weekly, every Monday. You can listen on all major platforms.
+              </div>
+            </div>
+          </div>
+          <!-- Вопрос 2 -->
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How can I support the podcast?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                You can support us by subscribing to one of our premium plans, buying merchandise, or sharing episodes with your friends.
+              </div>
+            </div>
+          </div>
+          <!-- Вопрос 3 -->
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Can I suggest topics or guests?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Absolutely! Send us your suggestions via the contact form or social media. We love hearing from our audience.
+              </div>
+            </div>
+          </div>
+          <!-- Добавьте дополнительные вопросы по необходимости -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<footer class="footer-section pt-5 pb-2 mt-0">
+  <div class="container">
+    <div class="row gy-4 justify-content-between">
+      <!-- Левая колонка: логотип, текст, соцсети -->
+      <div class="col-lg-3 col-md-5">
+        <div class="footer-logo mb-3">
+          <!-- Логотип SVG -->
+          <svg width="86" height="47" viewBox="0 0 86 47" fill="none" style="vertical-align:middle">
+            <path d="M80 37c-6.1 5.6-13.7 8.8-22 8.8C36 45.8 22.8 32.6 22.8 16.9c0-1.2 0.1-2.3 0.2-3.5" stroke="#181008" stroke-width="3"/>
+          </svg>
+          <span class="footer-logo-text ms-2">
+            <span class="logopod">POD</span><br>OF<br>CAST
+          </span>
+          <span class="footer-copyright ms-2 align-middle">©2021.</span>
+        </div>
+        <p class="footer-about">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="footer-socials mt-3 d-flex gap-3">
+          <!-- Twitter -->
+          <a href="#" class="footer-social">
+            <svg width="22" height="22" fill="none"><path d="M20.8 4.6c-.8.4-1.6.7-2.5.8.9-.6 1.6-1.5 1.9-2.5-.8.5-1.7.9-2.6 1.1A4.12 4.12 0 0 0 11 7.3c0 .3 0 .6.1.9-3.4-.2-6.4-1.8-8.5-4.2C2.2 4.8 2 5.4 2 6c0 1.5.8 2.8 2 3.6-.8 0-1.6-.2-2.3-.6v.1c0 2.1 1.5 3.8 3.5 4.2-.4.1-.7.2-1.1.2-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.9A8.33 8.33 0 0 1 2 18c-.4 0-.7 0-1-.1A11.67 11.67 0 0 0 7.3 20c7.5 0 11.7-6.2 11.7-11.6 0-.2 0-.4 0-.6a8.9 8.9 0 0 0 2.2-2.2z" fill="#181008"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="footer-social">
+            <svg width="22" height="22" fill="none"><rect x="2.2" y="2.2" width="17.6" height="17.6" rx="5" stroke="#181008" stroke-width="2"/><circle cx="11" cy="11" r="4.4" stroke="#181008" stroke-width="2"/><circle cx="17" cy="5" r="1" fill="#181008"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="#" class="footer-social">
+            <svg width="22" height="22" fill="none"><path d="M16.8 2h-2.3v12.6a2.7 2.7 0 1 1-2.7-2.7v-2.3a5 5 0 1 0 5 5V7.8a4.35 4.35 0 0 0 2.7.8V6.3a2.7 2.7 0 0 1-2.7-2.7" stroke="#181008" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Центральная колонка - меню -->
+      <div class="col-lg-5 col-md-7 mt-4 mt-lg-0 d-flex flex-row flex-wrap footer-menus">
+        <div class="me-5 mb-3">
+          <ul class="footer-menu">
+            <li><a href="#" class="">About</a></li>
+            <li><a href="#" class="footer-link-accent">Testimonials</a></li>
+            <li><a href="#" class="">Features</a></li>
+          </ul>
+        </div>
+        <div class="me-5 mb-3">
+          <ul class="footer-menu">
+            <li><a href="#" class="footer-link-accent">Episodes</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-pod-platform mb-2">Listen to episodes on your fav platform:</div>
+          <div class="footer-platforms d-flex gap-3 mb-3">
+            <a href="#" class="footer-platform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlepodcasts.svg" width="24" height="24" alt="Google Podcasts" />
+            </a>
+            <a href="#" class="footer-platform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/spotify.svg" width="25" height="25" alt="Spotify" />
+            </a>
+            <a href="#" class="footer-platform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" width="27" height="22" alt="YouTube" />
+            </a>
+          </div>
+          <div class="footer-pod-platform">App available on:</div>
+          <div class="footer-apps d-flex gap-3 mt-1">
+            <a href="#" class="footer-app">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg" width="27" height="27" alt="App Store"/>
+            </a>
+            <a href="#" class="footer-app">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleplay.svg" width="27" height="27" alt="Google Play"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Разделитель -->
+    <hr class="footer-divider my-3">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-7 col-12">
+        <div class="footer-copy">
+          ©2022. All Rights Reserved. <span class="footer-copy-accent">Pod of Cast</span>
+        </div>
+      </div>
+      <div class="col-md-5 col-12 text-md-end">
+        <ul class="footer-terms d-inline-block mb-0">
+          <li><a href="#">Terms</a></li>
+          <li class="mx-2 text-muted">•</li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
